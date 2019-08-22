@@ -1,6 +1,7 @@
 $background: #034b61;
 $text: #ffffff;
 $button: #07aee0;
+$hover: #047294;
 
 $font: 'Roboto', sans-serif;
 
@@ -49,9 +50,15 @@ html {
                            color: $text;
                            font-size: 20px;
                            padding: 20px 8%;
-                           border-radius: 7px;
+                           border-radius: 3px;
                            cursor: pointer;
                            font-family: $font;
+                           font-weight: 300;
+                           transition: all 0.5s ease-in-out;
+
+                           &:hover {
+                               background-color: $hover;
+                           }
                         }
                     }
                 }
