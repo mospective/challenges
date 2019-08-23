@@ -1,0 +1,192 @@
+$font: 'Roboto', sans-serif;
+$bg: #047294;
+$rim: #034154;
+$foreground: #0586ad;
+$white: #ffffff;
+
+$clock-size: 300px;
+
+html {
+    padding: 0;
+        margin: 0;
+    body {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        background-color: $bg;
+       
+
+        main {
+            display: flex;
+            justify-content: center;
+            section {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                
+
+                h1 {
+                    text-align: center;
+                    margin-bottom: 20px;
+                    font-size: 44px;
+                    font-weight: 300;
+                    font-family: $font;
+                    color: $white;
+                 
+                }
+                // Clock shape
+                .clock {
+                    width:$clock-size;
+                    height: $clock-size;
+                    background-color: $foreground;
+                    position: relative;
+                    border: 14px solid $rim;
+                    border-radius: 50%;
+                }
+                //Dot center
+                .dot {
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 50%;
+                    background: $white;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    margin: auto;
+                    position: absolute;
+                    z-index: 10;
+                    
+                }
+
+                //Clock hands 
+                .hands {
+                    .hour-hand {
+                        position: absolute;
+                        z-index: 5;
+                        width: 5px;
+                        height: 65px;
+                        background-color: $white;
+                        border-top-left-radius: 5px;
+                        border-top-right-radius: 5px;
+                        top: 85px;
+                        left: 50%;
+                        transform-origin: 50% 100%;
+                        margin-left: -2px;
+                    }
+                    .minute-hand {
+                        position: absolute;
+                        z-index: 8;
+                        width: 5px;
+                        height: 125px;
+                        background-color: $white;
+                        border-top-left-radius: 50%;
+                        border-top-right-radius: 50%;
+                        top: 22px;
+                        left: 50%;
+                        transform-origin: 50% 100%;
+                        margin-left: -2px;
+                    }
+                    .second-hand {
+                        position: absolute;
+                        z-index: 9;
+                        width: 3px;
+                        height: 135px;
+                        background-color: $white;
+                        border-top-right-radius: 50%;
+                        border-top-left-radius: 50%;
+                        top: 15px;
+                        left: 50%;
+                        margin-left: -1px;
+                        transform-origin: 50% 100%;
+                    }
+                }
+
+                //Clock numbers on the dial
+                .numbers {
+                    span {
+                        display: inline-block;
+                        position: absolute;
+                        color: $white;
+                        font-size: 22px;
+                        font-family: $font;
+                        font-weight: 400;
+                        
+                        
+                        z-index: 4;
+
+                        &:nth-child(4) {
+                            top: 12px;
+                            left: 50%;
+                            transform: translateX(-50%); 
+                        }
+                        &:nth-child(3) {
+                            left: 13px;
+                            top: 50%;
+                            transform: translateY(-50%); 
+                        }
+                        &:nth-child(2) {
+                            bottom: 12px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                        }
+                        &:nth-child(1) {
+                            right: 12px;
+                            top: 50%;
+                            transform: translateY(-50%)
+                        }
+                    }
+                }
+                .lines {
+                    position: absolute;
+                    z-index: 4;
+                    width: 2px;
+                    height: 5px;
+                    background-color: $white;
+                    left: 50%;
+                    
+                    transform-origin: 0% 150px;
+                  
+                    
+
+                    &:nth-child(5n - 1) {
+                        position: absolute;
+                        z-index: 5;
+                        width: 2px;
+                        height: 10px;
+                        background-color: $white;
+                    }
+                }
+
+                
+            }
+
+            //timezone selections
+            .options {
+                text-align: center;
+
+                p {
+                    font-size: 20px;
+                    color: $white;
+                    font-family: $font;
+                }
+                select {
+                    background-color: $rim;
+                    border: 0;
+                    color: #fff;
+                    font-family: $font;
+                    font-weight: 300;
+                    padding: 1em;
+                    font-size: 18px; 
+
+                    option {
+                        width: 300px;
+                        
+                    }
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,195 @@
+html {
+  padding: 0;
+  margin: 0;
+}
+
+html body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  background-color: #047294;
+}
+
+html body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+html body main section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body main section h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 44px;
+  font-weight: 300;
+  font-family: "Roboto", sans-serif;
+  color: #ffffff;
+}
+
+html body main section .clock {
+  width: 300px;
+  height: 300px;
+  background-color: #0586ad;
+  position: relative;
+  border: 14px solid #034154;
+  border-radius: 50%;
+}
+
+html body main section .dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ffffff;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  z-index: 10;
+}
+
+html body main section .hands .hour-hand {
+  position: absolute;
+  z-index: 5;
+  width: 5px;
+  height: 65px;
+  background-color: #ffffff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  top: 85px;
+  left: 50%;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+  margin-left: -2px;
+}
+
+html body main section .hands .minute-hand {
+  position: absolute;
+  z-index: 8;
+  width: 5px;
+  height: 125px;
+  background-color: #ffffff;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  top: 22px;
+  left: 50%;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+  margin-left: -2px;
+}
+
+html body main section .hands .second-hand {
+  position: absolute;
+  z-index: 9;
+  width: 3px;
+  height: 135px;
+  background-color: #ffffff;
+  border-top-right-radius: 50%;
+  border-top-left-radius: 50%;
+  top: 15px;
+  left: 50%;
+  margin-left: -1px;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+}
+
+html body main section .numbers span {
+  display: inline-block;
+  position: absolute;
+  color: #ffffff;
+  font-size: 22px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  z-index: 4;
+}
+
+html body main section .numbers span:nth-child(4) {
+  top: 12px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+html body main section .numbers span:nth-child(3) {
+  left: 13px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+html body main section .numbers span:nth-child(2) {
+  bottom: 12px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+html body main section .numbers span:nth-child(1) {
+  right: 12px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+html body main section .lines {
+  position: absolute;
+  z-index: 4;
+  width: 2px;
+  height: 5px;
+  background-color: #ffffff;
+  left: 50%;
+  -webkit-transform-origin: 0% 150px;
+          transform-origin: 0% 150px;
+}
+
+html body main section .lines:nth-child(5n - 1) {
+  position: absolute;
+  z-index: 5;
+  width: 2px;
+  height: 10px;
+  background-color: #ffffff;
+}
+
+html body main .options {
+  text-align: center;
+}
+
+html body main .options p {
+  font-size: 20px;
+  color: #ffffff;
+  font-family: "Roboto", sans-serif;
+}
+
+html body main .options select {
+  background-color: #034154;
+  border: 0;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  padding: 1em;
+  font-size: 18px;
+}
+
+html body main .options select option {
+  width: 300px;
+}
+/*# sourceMappingURL=style.css.map */
